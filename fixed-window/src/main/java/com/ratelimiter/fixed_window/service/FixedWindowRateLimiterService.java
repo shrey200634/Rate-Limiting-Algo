@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 import java.time.Instant;
 import java.util.Collections;
 import java.util.List;
-@AllArgsConstructor
 @Service
 public class FixedWindowRateLimiterService {
 
@@ -23,6 +22,10 @@ public class FixedWindowRateLimiterService {
     @Value("${ratelimit.fixed-window.window-seconds:60}")
     private int windowSeconds ;
 
+     public FixedWindowRateLimiterService(StringRedisTemplate redisTemplate , RedisScript<List> fixedWindowScript){
+         this.fixedWindowScript=fixedWindowScript;
+           this.redisTemplate= redisTemplate;
+          }
     public RateLimitResult tryAcquire(String identifier ){
         String key = "ratelimit:fixed:" + identifier;
 
