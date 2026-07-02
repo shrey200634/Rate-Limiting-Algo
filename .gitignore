@@ -1,7 +1,60 @@
-env
-.idea/
-.idea
-idea
-
+# Gradle
 .gradle/
- build/reports/problems/problems-report.html
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Gradle wrapper - keep the jar and properties, ignore nothing else needed
+# (gradlew and gradlew.bat should be committed, NOT ignored)
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Eclipse
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+
+# VS Code
+.vscode/
+
+# Compiled class files
+*.class
+
+# Log files
+*.log
+logs/
+
+# Spring Boot
+HELP.md
+
+# OS-specific
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment / secrets
+.env
+*.env.local
+application-local.yml
+application-local.properties
+
+# Docker
+docker-compose.override.yml
+
+# Node (in case benchmark-tool or dashboards ever use it)
+node_modules/
+
+# Test / coverage output
+coverage/
+*.execroblems-report.html
