@@ -1,3 +1,13 @@
+server:
+  port: 8081
+
 spring:
-  application:
-    name: fixed-window
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+ratelimit:
+  fixed-window:
+    limit: 5
+    window-seconds: 60
