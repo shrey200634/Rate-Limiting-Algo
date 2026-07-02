@@ -1,0 +1,7 @@
+env
+.idea/
+.idea
+idea
+
+.gradle/
+ build/reports/problems/problems-report.html
