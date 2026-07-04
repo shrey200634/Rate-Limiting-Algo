@@ -1,4 +1,4 @@
-package com.ratelimiter.token_bucket;
+package com.ratelimiter.token_bucket.service;
 
 import com.ratelimiter.common.dto.RateLimitResult;
 import com.ratelimiter.common.util.TimeProvider;
