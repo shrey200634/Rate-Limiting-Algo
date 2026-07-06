@@ -11,7 +11,7 @@ import java.util.Collections;
 import java.util.List;
 
 @Service
-public class slidingWindowLogService {
+public class SlidingWindowLogService {
 
     private final RedisScript<List> redisScript ;
     private final StringRedisTemplate stringRedisTemplate ;
@@ -22,8 +22,8 @@ public class slidingWindowLogService {
     @Value("${ratelimit.sliding-window-log.window-seconds:60}")
     private int windowSeconds;
 
-    public  slidingWindowLogService(RedisScript<List> redisScript , StringRedisTemplate stringRedisTemplate ,
-                                    TimeProvider timeProvider){
+    public SlidingWindowLogService(RedisScript<List> redisScript , StringRedisTemplate stringRedisTemplate ,
+                                   TimeProvider timeProvider){
         this.redisScript = redisScript ;
         this.stringRedisTemplate = stringRedisTemplate ;
         this.timeProvider = timeProvider ;
