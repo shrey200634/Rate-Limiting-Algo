@@ -1,2 +1,2 @@
 rootProject.name = 'rate-limiting-algorithms'
-include 'common', 'fixed-window' , 'token-bucket', 'leaky-bucket'
+include 'common', 'fixed-window' , 'token-bucket', 'leaky-bucket', 'sliding-window-log'
